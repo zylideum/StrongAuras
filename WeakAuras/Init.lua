@@ -572,13 +572,6 @@ if not libsAreOk then
   end)
 end
 
-if WeakAuras.IsMidnight() then
-  C_Timer.After(1, function()
-    WeakAuras.prettyPrint("WeakAuras does not support Midnight due to Blizzard restricting addons. Read more at https://patreon.com/WeakAuras")
-  end)
-  libsAreOk = false
-end
-
 -- These function stubs are defined here to reduce the number of errors that occur if WeakAuras.lua fails to compile
 --- @type fun(regionType: string, createFunction: function, modifyFunction: function, defaults: table, properties: table|function|nil, validate: function?))
 function Private.RegisterRegionType(_, _, _ ,_)
